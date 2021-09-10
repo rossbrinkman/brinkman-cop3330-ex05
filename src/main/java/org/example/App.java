@@ -13,19 +13,23 @@ public class App
         System.out.println( "What is the first number? " );
 
         Scanner scanner = new Scanner(System.in);
-        String first, second;
-        int firstNumber, secondNumber;
+        int first, second, addition, subtraction, multiplication, division;
 
-        first = scanner.nextLine();
-        firstNumber = Integer.parseInt(first);
+        first = scanner.nextInt();
 
         System.out.println( "What is the second number? " );
-        second = scanner.nextLine();
-        secondNumber = Integer.parseInt(second);
+        second = scanner.nextInt();
 
-        System.out.println( firstNumber + " + " + secondNumber + " = " + (firstNumber+secondNumber));
-        System.out.println( firstNumber + " - " + secondNumber + " = " + (firstNumber-secondNumber));
-        System.out.println( firstNumber + " * " + secondNumber + " = " + (firstNumber*secondNumber));
-        System.out.println( firstNumber + " / " + secondNumber + " = " + (firstNumber/secondNumber));
+        addition = first + second;
+        subtraction = first - second;
+        multiplication = first * second;
+        division = first / second;
+
+        System.out.println(
+                first + " + " + second + " = " + addition + "\n" +
+                first + " - " + second + " = " + subtraction + "\n" +
+                first + " * " + second + " = " + multiplication + "\n" +
+                first + " / " + second + " = " + division
+        );
     }
 }
